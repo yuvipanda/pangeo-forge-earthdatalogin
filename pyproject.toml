@@ -27,3 +27,6 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
 write_to = "pangeo_forge_earthdatalogin/_version.py"
 write_to_template = "__version__ = '{version}'"
+
+[project.entry-points."pangeo_forge_runner.injection_specs"]
+edl_injections = "pangeo_forge_earthdatalogin:get_injection_specs"
