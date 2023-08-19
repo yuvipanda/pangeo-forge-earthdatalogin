@@ -33,3 +33,14 @@ class OpenURLWithEarthDataLogin(OpenURLWithFSSpec):
                 "No earthdata login credentials found - set a token with EARTHDATA_LOGIN_TOKEN environment variable, or an entry for urs.earthdata.nasa.gov in your netrc file"
             )
         return super().expand(*args, **kwargs)
+
+
+def get_injection_specs():
+    """
+    Tell pangeo-forge-runner what values to inject where
+    """
+    return {
+        "OpenURLWithEarthDataLogin": {
+            "cache": "CACHE_ROOT"
+        }
+    }
