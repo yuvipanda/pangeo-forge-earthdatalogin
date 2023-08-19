@@ -1,7 +1,25 @@
+[project]
+name = "pangeo-forge-earthdatalogin"
+dynamic = ["version"]
+description = "Beam Transforms for doing EarthData Login, for use with pangeo-forge-recipes"
+readme = "README.md"
+authors = [
+  { name =  "Yuvi Panda", email = "yuvipanda@gmail.com" }
+]
+
+license = { text = "3-BSD" }
+requires-python = ">=3.8"
+dependencies = [
+  "pangeo-forge-recipes",
+  "aiohttp"
+]
+
+[project.urls]
+Homepage = "https://github.com/yuvipanda/pangeo-forge-earthdatalogin"
+
 [tool.black]
 line-length = 100
 
-# pyproject.toml
 [build-system]
 requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
 build-backend = "setuptools.build_meta"
